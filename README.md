@@ -12,7 +12,7 @@ Please reach out to Mira Liu at mirabai.liu@mountsinai.org if you have any quest
 See "ExampleRun.m" in the Example folder for how to run the code.
 
 # Code Base
-This code was adapted by Mira M. Liu from a simulation with [open source code](https://github.com/JoaoPeriquito/NNLS_computation_of_renal_DWI) to create spectral maps with an image viewer that shows the spectrum per voxel. It also will sort parameters based on signal fraction and diffusion, and creates multi-compartment flow maps.
+This code was adapted by Mira M. Liu from a [simulation](https://github.com/JoaoPeriquito/NNLS_computation_of_renal_DWI) to create spectral maps with an image viewer that shows the spectrum per voxel. It also will sort parameters based on signal fraction and diffusion, and creates multi-compartment flow maps.
 
 The inverse laplace is calculated with individual nonnegative least squares fit of each signal decay is based off of an original multi-exponential fitting model from Thorarin Bjarnason and Ross Mitchell (2010). 
 Therefore, if you use any version of this code, please check out, and cite appropriately, ["Quantification of multi-compartment flow from spectral diffusion of IVIM"](https://doi.org/10.48550/arXiv.2408.06427) by Mira Liu & Jon Dyke et al., ["Continuous diffusion spectrum computation for diffusion-weighted magnetic resonance imaging of the kidney tubule system"](https://doi.org/10.21037/qims-20-1360) by Joao Periquito & Thomas Gladytz et al. as well as ["AnalyzeNNLS: Magnetic resonance multiexponential decay image analysis"](https://doi.org/10.1016/j.jmr.2010.07.008) by Thorarin Bjarnason & Joseph Mitchel.
