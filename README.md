@@ -7,8 +7,7 @@ The regularization factor can be adjusted by hand, or can be set to generalized 
 The spectral peaks can then be sorted, with one example provided though the provided sorting may not be ideal depending on the application. 
 It outputs maps and spectra on a voxel-by-voxel basis as matfiles.
 
-Please reach out to Mira Liu at mirabai.liu@mountsinai.org if you have any questions.
-- May 2025
+Please reach out to Mira Liu at mirabai.liu@mountsinai.org if you have any questions. May 2025
 
 See "ExampleRun.m" in the Example folder for how to run the code.
 
