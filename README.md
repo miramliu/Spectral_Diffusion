@@ -1,5 +1,7 @@
 # Spectral Diffusion
 
+# See "ExampleRun.m" in the Example folder for step-by-step code.
+
 # Overview
 Code in Matlab 2023a for processing spectral diffusion of multi b-value DWI for multi-compartment diffusion MRI of the kidney. 
 It takes a stack of dicoms sorted by b-value trace (nx, ny, bvalue), and approximates the inverse Laplace transform as a spectrum of M exponential components with non negative least squares. 
@@ -8,8 +10,6 @@ The spectral peaks can then be sorted, with one example provided though the prov
 It outputs maps and spectra on a voxel-by-voxel basis as matfiles.
 
 Please reach out to Mira Liu at mirabai.liu@mountsinai.org if you have any questions. May 2025
-
-# See "ExampleRun.m" in the Example folder for step-by-step code.
 
 # Code Base
 This code was adapted by Mira M. Liu from a [simulation](https://github.com/JoaoPeriquito/NNLS_computation_of_renal_DWI) to create spectral maps with an image viewer that shows the spectrum per voxel. It also will sort parameters based on signal fraction and diffusion, and creates multi-compartment flow maps.
