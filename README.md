@@ -1,7 +1,7 @@
 # Spectral Diffusion
 
 # Overview
-Code written in Matlab 2023a by Mira M. Liu for processing spectral diffusion of multi b-value DWI for multi-compartment imaging of the kidney. 
+Code in Matlab 2023a for processing spectral diffusion of multi b-value DWI for multi-compartment diffusion MRI of the kidney. 
 It takes a stack of dicoms sorted by b-value trace (nx, ny, bvalue), and approximates the inverse Laplace transform as a spectrum of M exponential components with non negative least squares. 
 The regularization factor can be adjusted by hand, or can be set to generalized cross-validation.
 The spectral peaks can then be sorted, with one example provided though the provided sorting may not be ideal depending on the application. 
