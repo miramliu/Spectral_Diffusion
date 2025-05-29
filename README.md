@@ -21,7 +21,7 @@ This repository is meant to be a code base, not professional software; it is mea
 
 It is set to assume a sort into a maximum of three diffusion compartments, but this maximum can be adjusted on a user basis
 
-The peaks are set to be sorted according to proposed kidney diffusion coefficient boundaries. They can be re-sorted as needed after the Spectral Diffusion is run from the output Spectral maps (SpectralDWI.Spectral_Volume) has an (nx, ny, M) volume of the spectra for each voxel.
+The peaks are set to be sorted according to proposed kidney diffusion coefficient boundaries. They can be re-sorted as needed after the Spectral Diffusion is run from the output Spectral maps has an (nx, ny, M) volume of the spectra for each voxel.
 
 The b-values must be updated according to acquisition, and the input file assumes it is images stacked in the format of (nx, ny, b) of Trace averages with b in ascending order (e.g. b=0, b100, b200... b800).
 
