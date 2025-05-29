@@ -13,7 +13,7 @@ addpath /Spectral_Diffusion/rNNLS/nwayToolbox
 % run voxel-by-voxel fit on example
 dicompath = '/Spectral_Diffusion/Example/';
 StackName = 'StackedDicoms.mat'; % given a stacked set of trace dicoms (nx, ny, b) 
-lambda = 0.1;
+lambda = 0.1; %set to 0.1, can also be set to 'cv' for generalized cross validation, or to alternate values.
 KidneyMask = 'KidneyMask.mat';
 RunKidney_Spectral_Diffusion(dicompath,StackName,lambda,KidneyMask);
 
@@ -23,7 +23,6 @@ RunKidney_Spectral_Diffusion(dicompath,StackName,lambda,KidneyMask);
 
 
 % once completed, load and see the fD maps as follows using another GUI of mine: 
-
 load('StackedDicoms_SpectralDWI.mat')
 Parameter_Volume = SpectralDWI.Parameter_Volume;
 fD_maps(:,:,1)=Parameter_Volume(:,:,1).*Parameter_Volume(:,:,4);
