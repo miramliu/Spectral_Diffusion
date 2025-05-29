@@ -30,7 +30,7 @@ function RunKidney_Spectral_Diffusion(varargin)
     KidneyMaskedDicoms = permute(KidneyMaskedDicoms, [3,1,2]); %to have it bval, nx, ny
 
     % run analysis
-    disp(['started: '  + string(datetime("now"))])
+    disp(['Started: '  + string(datetime("now"))])
 
     [parameter_map, spectral_map] =  Spectral_FIT_continuousNNLS_kidney(Bvalues,KidneyMaskedDicoms,lambda);
 
@@ -41,9 +41,10 @@ function RunKidney_Spectral_Diffusion(varargin)
     % export, can adjust naming preferences here.
     SaveDIR = fullfile(dicomfolderpath, StackName(1:end-4) + "_SpectralDWI.mat"); 
     save (SaveDIR, 'SpectralDWI');
-    disp(['saved.... ' SaveDIR])
 
     disp(['Completed: ' + string(datetime("now"))])
+    fprintf('Saved as:\n' + SaveDIR + '\n')
+
 end
 
 

@@ -11,6 +11,8 @@ addpath /Spectral_Diffusion/rNNLS/nwayToolbox
 
 
 % run voxel-by-voxel fit on example
+
+%give total path to folder of interest (folder that has the stacked trace dicoms)
 dicompath = '/Spectral_Diffusion/Example/';
 StackName = 'StackedDicoms.mat'; % given a stacked set of trace dicoms (nx, ny, b) 
 lambda = 0.1; %set to 0.1, can also be set to 'cv' for generalized cross validation, or to alternate values.
@@ -22,7 +24,8 @@ RunKidney_Spectral_Diffusion(dicompath,StackName,lambda,KidneyMask);
 % "Spectral_Volume" should contain the spectra per voxel. This can be used to view the spectra per voxel in a GUI that I have in progress. 
 
 
-% once completed, load and see the fD maps as follows using another GUI of mine: 
+% once completed, load the created file (which is saved in the original folder with name_SpectralDWI) 
+% and see the fD maps as follows using another GUI of mine: 
 load('StackedDicoms_SpectralDWI.mat')
 Parameter_Volume = SpectralDWI.Parameter_Volume;
 fD_maps(:,:,1)=Parameter_Volume(:,:,1).*Parameter_Volume(:,:,4);
