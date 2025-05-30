@@ -8,10 +8,7 @@
 % figure scales with window size
 % can zoom in and out 
 
-% to be added: be able to flip and rotate images, be able to see outlines
-% of ROIs while scrolling through stack, be able to change the colormap.
-
-%any questions direct to liusarkarm@uchicago.edu
+%any questions direct to mira liu at liusarkarm@uchicago.edu
 
 classdef imagestack < matlab.apps.AppBase
 
