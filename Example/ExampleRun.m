@@ -1,4 +1,5 @@
 %% example code to run spectral diffusion of multi-b-value  DWI of a kidney
+% Mira Liu 05/25/2025
 
 
 % load relevant folders, adjust the path to local drive as needed
