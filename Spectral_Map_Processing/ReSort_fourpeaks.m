@@ -3,10 +3,11 @@
 % written originally by location along diffusion coefficient spectra
 % now written to include largest peak as diffusion. 
 
-% This code was written BRUTE FORCE and done as research progressed. It can certainly be neatened or re-written, and is provided just as a bas example. this is just one potential method of sorting the peaks, it showed statistical significance in kidney allografts but alternate
+% This code was written BRUTE FORCE and done as research progressed. It can certainly be neatened or re-written, and is provided just as a base example. 
+% this is just one potential method of sorting the peaks, it showed statistical significance in kidney allografts but alternate
 % sorting methods may be superior. This did outperform simple sorting by D thresholding, but again could be made much cleaner.
 
-% 'expected' diffusion is 1.8 now as opposed to 1.5, and assumes 'fibro' is discarded D < .8, tissue is 0.8< tissue < 5 , 5 < tubule <
+% 'expected' diffusion is 1.8, and assumes 'fibro' is discarded D < .8, tissue is 0.8< tissue < 5 , 5 < tubule <
 % 50, < 50, and blood is > 50 (all in 10-3 mm2/s).
 
 
@@ -269,7 +270,7 @@ function SortedresultsPeaks = ReSort_fourpeaks(resultsPeaks)
 
                 % if it has only been assigned tissue compartment... 
                 if SortingDone ==0 
-                    %if tissue diffusion it's the smallest (i.e. no fibrosis peak lower than tissue diffusion)
+                    %if tissue diffusion is the smallest (i.e. no fibrosis peak lower than tissue diffusion)
                     if CompartmentDiffusions(tissue_idx) == min(nonzeros(CompartmentDiffusions))
                         f_blood = CompartmentFractions(max_idx);
                         D_blood = CompartmentDiffusions(max_idx);
@@ -341,7 +342,7 @@ function SortedresultsPeaks = ReSort_fourpeaks(resultsPeaks)
                 end
 
             else % if largest peak is NOT the closest to 1.8 (minidx is not equal to compartmaxidx)
-                % if the largest peak is in the diffusion range... just call it diffusion anyway
+                % if the largest peak is in the diffusion range...  call it diffusion anyway
                 if  CompartmentDiffusions(idxs(compartmaxidx)) > 0.8 && CompartmentDiffusions(idxs(compartmaxidx)) < 5 
                     %disp('check 3')
                     tissue_idx = idxs(compartmaxidx);
