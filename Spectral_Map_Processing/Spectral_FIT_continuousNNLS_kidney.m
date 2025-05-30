@@ -1,3 +1,6 @@
+%% Fit curve to unconstrained sum of exponentialswith NNLS
+% Mira Liu 2025
+
 function [parameter_map, spectralmap] = Spectral_FIT_continuousNNLS_kidney(b_values, ImageStack, lambda)
 %------------------------------------------------------%
 
