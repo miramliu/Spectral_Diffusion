@@ -26,7 +26,7 @@ function [parameter_map, spectralmap] = Spectral_FIT_continuousNNLS_kidney(b_val
     
     for i=1:nx
         for j=1:ny
-            if (ImageStack(1,i,j) > 100 ) 
+            if (ImageStack(1,i,j) > 0 ) 
 
                 % for normal b values
                 SignalInput = squeeze(double(ImageStack(1:N_Bvalues,i,j)/ImageStack(1,i,j))); 
