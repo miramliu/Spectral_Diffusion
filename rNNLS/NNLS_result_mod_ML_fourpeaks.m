@@ -137,8 +137,8 @@ function [ GeoMeanRegionADC_1,GeoMeanRegionADC_2,GeoMeanRegionADC_3,GeoMeanRegio
     
     
         catch
-            semilogx(ADCBasis, TempAmplitudes)
-            pause()
+            %semilogx(ADCBasis, TempAmplitudes)
+            %pause()
             GeoMeanRegionADC_1 = 0;
             RegionFraction1 = 10000; %just to catch it. 
             GeoMeanRegionADC_2 = 0;

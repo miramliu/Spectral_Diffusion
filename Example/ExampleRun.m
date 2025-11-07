@@ -1,5 +1,10 @@
 %% example code to run spectral diffusion of multi-b-value  DWI of a kidney
-% Mira Liu 05/25/2025
+
+% Input: Need a stacked matfile of the trace (nx, ny, b) and a mask of the kidney saved as 'Mask' in a matfile 'KidneyMask.mat'.
+
+% Output: A volume of parameters as V(f1, f2, f3, D1, D2, D3) for 1-3 as the three different compartments sorted.
+
+%% Mira Liu 05/25/2025
 
 
 % load relevant folders, adjust the path to local drive as needed
@@ -8,6 +13,7 @@ addpath /Spectral_Diffusion/rNNLS
 addpath /Spectral_Diffusion/noise_matrix
 addpath /Spectral_Diffusion/Spectral_Map_Processing/
 addpath /Spectral_Diffusion/rNNLS/nwayToolbox
+
 
 
 
